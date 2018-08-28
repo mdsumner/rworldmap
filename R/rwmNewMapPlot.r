@@ -32,8 +32,8 @@ rwmNewMapPlot <- function(mapToPlot=getMap(),
   }
 
   #getting xlim & ylim from bbox of map if they haven't been specified
-  if (length(xlim)<2) xlim <- bbox(mapToPlot)['x',]  
-  if (length(ylim)<2) ylim <- bbox(mapToPlot)['y',]
+  if (length(xlim)<2) xlim <- bbox(mapToPlot)[1L,]  ## no assume names
+  if (length(ylim)<2) ylim <- bbox(mapToPlot)[2L,]
   
   
   plot.new()
